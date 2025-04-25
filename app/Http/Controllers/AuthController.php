@@ -40,6 +40,17 @@ class AuthController extends Controller
         'email'=>'required|email|unique:users',
         'phone'=>'nullable',
         'password'=>'required|min:8|confirmed',
+       ],[
+        'name.required'=>'please enter your name',
+        'username.required'=>'please enter your username',
+        'username.unique'=>'this username is already taken',
+        'email.required'=>'please enter your email',
+        'email.email'=>'please enter a valid email address',
+        'email.unique'=>'this email is already taken',
+        'phone.required'=>'please enter your phone number',
+        'password.required'=>'please enter your password',
+        'password.min'=>'password must be at least 8 characters long',
+        'password.confirmed'=>'password confirmation does not match',
        ]);
        User::create([
         'name'=>$request->name,

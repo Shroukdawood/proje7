@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 Route::get('/login',[AuthController::class,'showlogin'])->name('login');
-Route::post('/login',[AuthController::class,'showlogin']);
+Route::post('/logincheck',[AuthController::class,'showlogin']);
 Route::get('/register',[AuthController::class,'showregister'])->name('register');
 Route::post('/register',[AuthController::class,'showregister']);
 route::middleware('auth')->group(function(){

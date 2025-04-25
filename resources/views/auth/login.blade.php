@@ -4,9 +4,7 @@
    <div class="container mt-5 col-md-4">
         <h1 class="text-center">Login</h1>
         @if (@errors-any())
-            <div class="alert alert-danger">
-                
-            </div>
+        <div class="alert alert-danger">{{$errors->message()}}</div>
             
         @endif
         <form action="{{ route('login') }}" method="POST">
