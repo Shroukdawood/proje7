@@ -3,10 +3,10 @@
 @section('content')
    <div class="container mt-5 col-md-4">
         <h1 class="text-center">Login</h1>
-        @if (@errors-any())
+        {{-- @if (@errors-any())
         <div class="alert alert-danger">{{$errors->message()}}</div>
             
-        @endif
+        @endif --}}
         <form action="{{ route('login') }}" method="POST">
             @csrf
         

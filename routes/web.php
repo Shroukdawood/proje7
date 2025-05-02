@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
@@ -13,3 +14,5 @@ route::middleware('auth')->group(function(){
     route::get('/dashboard',[AuthController::class,'showdashboard'])->name('dashboard');
 route::post('/logout',[AuthController::class,'showdashboard']);
 });
+
+// Route::apiresource("posts",PostController::class);
